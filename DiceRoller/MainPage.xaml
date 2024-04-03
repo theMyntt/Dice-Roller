@@ -3,27 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DiceRoller.MainPage">
 
-    <StackLayout Orientation="Vertical">
-        <Label
-            x:Name="DiceRollerResult"
-            Text="0"/>
+    <FlexLayout AlignItems="Center" JustifyContent="Center">
+        <StackLayout
+            Orientation="Vertical"
+            WidthRequest="200">
+            <Label
+                x:Name="DiceRollerResult"
+                Text="0"/>
 
-        <Picker
-            x:Name="SelectDiceFaceNumber">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:Int32}">
-                     <x:Int32>4</x:Int32>
-                     <x:Int32>6</x:Int32>
-                     <x:Int32>10</x:Int32>
-                     <x:Int32>20</x:Int32>
-                     <x:Int32>100</x:Int32>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
+            <Picker
+                x:Name="SelectDiceFaceNumber">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:Int32}">
+                        <x:Int32>4</x:Int32>
+                        <x:Int32>6</x:Int32>
+                        <x:Int32>10</x:Int32>
+                        <x:Int32>20</x:Int32>
+                        <x:Int32>100</x:Int32>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
-        <Button
-            Text="SORTEAR"
-            Clicked="RandResult"/>
+            <Button
+                Text="SORTEAR"
+                Clicked="RandResult"/>
     </StackLayout>
+    </FlexLayout>
 
 </ContentPage>
