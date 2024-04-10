@@ -10,6 +10,8 @@ namespace DiceRoller
 {
     public partial class MainPage : ContentPage
     {
+        public int index;
+
         public MainPage()
         {
             InitializeComponent();
@@ -19,15 +21,17 @@ namespace DiceRoller
         {
             Random rand = new Random();
 
-            int selectedNum = (int)SelectDiceFaceNumber.SelectedItem;
-
-            if (SelectDiceFaceNumber.SelectedItem != null)
+            if (index != -1 && SelectDiceFaceNumber.SelectedItem != null)
             {
-                DiceRollerResult.Text = rand.Next(1, selectedNum + 1).ToString();
+                int min = 1;
+                int max = (int)SelectDiceFaceNumber.SelectedItem;
+
+                int v = rand.Next(min, max + 1);
+                DiceRollerResult.Text = v.ToString();
             }
             else
             {
-                DisplayAlert("Atenção", "Você precisa selecionar um número primeiro antes de sortear", "Ok");
+                DisplayAlert("Atenção", "Você precisa selecionar um dado primeiro.", "OK");
             }
         }
     }

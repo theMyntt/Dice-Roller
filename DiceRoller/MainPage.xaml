@@ -9,10 +9,14 @@
             WidthRequest="200">
             <Label
                 x:Name="DiceRollerResult"
-                Text="0"/>
+                Text="0"
+                HorizontalTextAlignment="Center"
+                FontSize="60"/>
 
             <Picker
-                x:Name="SelectDiceFaceNumber">
+                x:Name="SelectDiceFaceNumber"
+                Title="Selecione um número..."
+                SelectedItem="index">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:Int32}">
                         <x:Int32>4</x:Int32>
@@ -26,7 +30,9 @@
 
             <Button
                 Text="SORTEAR"
-                Clicked="RandResult"/>
+                Clicked="RandResult"
+                BackgroundColor="#4F4F4F"
+                TextColor="#fff"/>
     </StackLayout>
     </FlexLayout>
 
