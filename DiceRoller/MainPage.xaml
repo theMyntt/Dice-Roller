@@ -13,6 +13,10 @@
                 HorizontalTextAlignment="Center"
                 FontSize="60"/>
 
+            <Label
+                Text="Selecione um lado:"
+                />
+
             <Picker
                 x:Name="SelectDiceFaceNumber"
                 Title="Selecione um número..."
